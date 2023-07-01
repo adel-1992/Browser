@@ -1,0 +1,23 @@
+{
+  "name": "Responsive-Browser",
+  "short_name": "Responsive Browser",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background-color": "#fff",
+  "splash_pages": false,
+  "orientation":"any",
+  "description": "HTML, CSS, JS, Markdown editor and free seo tools for web developers.",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./assets/img/photo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

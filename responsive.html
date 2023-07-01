@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Responsive Example</title>
+		<link rel="stylesheet" href="bootstrap.min.css">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<style>
+			img{ margin:10px; padding:10px; transition:all 1s; }
+			.header{
+			font-weight:bold; text-align:center; transition:all 1s;
+			}
+			#nodis{ display:none; }
+			@media (max-width:299px){
+			#all{ display:none; }
+			#nodis{ display:block; }
+			}
+			@media (min-width: 300px) and (max-width: 450px){
+			img{
+			width:90%; height:200px;
+			background-color:#84eff4;
+			}
+			.header{ font-size: 25px; color:#fff; }
+			body{ background-color: #072845; }
+			}
+			
+			@media (min-width: 450px) and (max-width: 600px){
+			img{
+			width:40%; height:180px;
+			background-color:#070750;
+			}
+			.header{ font-size: 35px; color:#000; }
+			body{ background-color: #58a7eb; }
+			}
+			
+			@media (min-width: 600px) and (max-width: 1000px){
+			img{
+			width:25%; height:160px;
+			background-color:#f484f0;
+			}
+			.header{ font-size: 45px; color:#fff; }
+			body{ background-color: #550b16; }
+			}
+			
+			@media (min-width: 1001px) and (max-width: 1200px){
+			img{
+			width:20%; height:140px;
+			background-color:#144808;
+			}
+			.header{ font-size: 55px; color:#000; }
+			body{ background-color: #95ef80; }
+			}
+			
+			@media (min-width: 1201px){
+			img{
+			width:15%; height:120px;
+			background-color:#eff481;
+			}
+			.header{ font-size: 55px; color:#fff; }
+			body{ background-color: #86900f; }
+			}
+		</style>
+	</head>
+	<body>
+		<p style="color:red" id="nodis">
+		Sorry No Display For Less Than 300px
+		</p>
+		<div id="all" style="text-align:center;">
+			<p class="header">Welcome To Product Page</p> 
+			<img src="./assets/img/photo.png" >
+			<img src="./assets/img/photo.png" >
+			<img src="./assets/img/photo.png" >
+			<img src="./assets/img/photo.png" >
+			<img src="./assets/img/photo.png" >
+			<img src="./assets/img/photo.png" >
+			<img src="./assets/img/photo.png" >
+			<img src="./assets/img/photo.png" >
+			<img src="./assets/img/photo.png" >
+			<img src="./assets/img/photo.png" >
+			<img src="./assets/img/photo.png" >
+			<img src="./assets/img/photo.png" >
+		</div>
+	</body>
+</html>

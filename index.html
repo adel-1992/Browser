@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Responsive Browser</title>
+<link href="./assets/css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-status-bar" content="#0099ff" />
+<!-- Manifest File link -->
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.png" type="image/png">
+</head>
+<body>
+   <div class="container">
+      <div class="sizes">
+         <!--
+         <div class="size">
+            
+            <input value="1920" type="radio" name="size" id="xLarg">
+            <label for="xLarg">
+         شاشة عرض
+            </label>
+         </div>
+         <div class="size">
+            <input value="1200" type="radio" name="size" id="computer" checked>
+            <label for="computer">
+            كمبيوتر
+            </label>
+         </div>
+         <div class="size">
+            <input value="992" type="radio" name="size" id="laptop">
+            <label for="laptop">
+         لابتوب
+            </label>
+         </div>
+         <div class="size">
+            <input value="768" type="radio" name="size" id="taplet">
+            <label for="taplet"> 
+            تابلت
+            </label>
+         </div>
+         <div class="size">
+            <input value="393" type="radio" name="size" id="phone">
+            <label for="phone">
+            تليفون
+            </label>
+         </div>
+      
+      </div>
+      -->
+      <div class="search">
+         <input type="search" id="input" placeholder="
+         ابحث هنا ...
+         ">
+         <button id="btn">
+         بحث
+         </button>
+         <span class="size_val">320px</span>
+         <input type="range" class="range" max="1920" step="1">
+      </div>
+      <div class="result">
+         <iframe src="" id="iframe"></iframe>
+      </div>
+   </div>
+<script src="./assets/js/script.js"></script>
+<script type="text/javascript">
+var container = document.querySelector(".container");
+var ss = document.querySelector(".search");
+var sv = document.querySelector(".size_val");
+var rn = document.querySelector(".range");
+function sizeNow(){
+  var sn = document.documentElement.clientWidth;
+  container.style.width=sn+'px';
+  sv.innerText= sn + 'px';
+  rn.value = sn;
+  rn.min = sn;
+  rn.style.width = sn - 20 + 'px';
+  ss.style.width= sn + 'px';
+}
+sizeNow();
+rn.oninput=()=>{
+   sv.innerText=rn.value + 'px';
+   container.style.width=rn.value+'px';
+   ss.style.width=rn.value+'px';
+   // rn.style.width = document.documentElement.clientWidth;  
+}
+/*
+ // alert(window.innerHeight)
+ //var t = document.querySelector("h1");
+ var rn = document.querySelector(".range");
+ //t.innerText="h"
+ container.style.width=rn.value+'px';
+ rn.oninput=()=>{
+   //t.innerText=rn.value
+   container.style.width=rn.value+'px';
+ }
+ // alert( document.documentElement.clientWidth )
+ // alert(window.innerWidth)
+ */
+</script>
+</body>
+</html>
